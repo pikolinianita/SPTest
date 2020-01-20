@@ -27,11 +27,7 @@ class SWService {
     @Autowired
     private ReportFactory reportFactory;
     
-    //@Autowired
-   // private DBManager db;
     
-    //ReportSubresult[] srt=  {new ReportSubresult(1, "Sr1", "Sr2", "Sr3", "Sr4", "Sr5", "Sr6")};
-
     Report getReport(String id) {
         
         return sWRepository.findById(id).orElseThrow(() -> { throw new MyExc.NoSuchRecord("There is no record with ID " + id);

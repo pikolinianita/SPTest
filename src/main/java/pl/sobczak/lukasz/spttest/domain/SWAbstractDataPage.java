@@ -31,10 +31,7 @@ public abstract class SWAbstractDataPage <T extends SWAbstractPayload> {
     
     public SWAbstractDataPage (Url url, String name, HttpClientService httpClient) {  
     
-        //this.httpClient = httpClient;
-        //System.out.println(this.getClass());
-        //System.out.println(url.label +"?search="+name);
-       //System.out.println(this.httpClient);
+   
         var pageFromNet = HttpClientService.getResponsePage(url.label +"?search="+name, this.getClass());
         while (pageFromNet.hasNextPage()){
             pageFromNet.addNextPage(httpClient.getResponsePage( pageFromNet.getNextPageURL(), this.getClass()));
@@ -45,12 +42,12 @@ public abstract class SWAbstractDataPage <T extends SWAbstractPayload> {
     
     
     boolean hasNextPage() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
         return next!=null;
     }
 
     String getNextPageURL() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
         return next;
     }
 
@@ -61,10 +58,7 @@ public abstract class SWAbstractDataPage <T extends SWAbstractPayload> {
      }
      abstract void Validate();
         
-        //next = otherPage.next;
-        //results = Stream.concat(Stream.of(results), Stream.of(otherPage.results)).toArray(T[]::new);
-         //var xxx = Stream.of(otherPage.results);
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     public String hasHits() {
         return count > 0 ? "Ok" : "No hits";
     }

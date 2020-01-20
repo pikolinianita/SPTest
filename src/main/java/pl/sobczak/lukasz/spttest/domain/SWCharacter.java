@@ -16,10 +16,7 @@ public class SWCharacter extends SWAbstractPayload {
     String homeworld; //name, url
     String[] films;
 
-    //public SWCharacter() {
-   // }
-
-    
+      
     
     @Override
     public String toString() {
