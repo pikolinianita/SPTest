@@ -26,54 +26,44 @@ import pl.sobczak.lukasz.spttest.MyExc;
  */
 @Service
 public class HttpClientService {
-   static HttpClient connection  = HttpClient.newHttpClient();
-   static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-   /* public HttpClientService() {
-        connection = HttpClient.newHttpClient();
-        gson = new GsonBuilder().setPrettyPrinting().create();
-    }
-     */
-   
-   public static <T extends SWAbstractDataPage> T getResponsePage (String webPatch, Class<T> klass) {
-        
-       try {
-           
-           HttpRequest request = HttpRequest.newBuilder()
-                   .uri(URI.create(webPatch))
-                   .GET()
-                   .build();
-           
-           String body = connection.send(request, HttpResponse.BodyHandlers.ofString()).body();
-           var p = gson.fromJson(body, klass) ;          
-           return p;
-       } catch (IOException | InterruptedException ex) {
-           
-           throw new MyExc.HttpClientNoConnectionException("Cannot connect to SWApi.co");
-       }
-       
+    static HttpClient connection = HttpClient.newHttpClient();
+    static Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+    public static <T extends SWAbstractDataPage> T getResponsePage(String webPatch, Class<T> klass) {
+
+        try {
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(webPatch))
+                    .GET()
+                    .build();
+
+            String body = connection.send(request, HttpResponse.BodyHandlers.ofString()).body();
+            var p = gson.fromJson(body, klass);
+            return p;
+        } catch (IOException | InterruptedException ex) {
+
+            throw new MyExc.HttpClientNoConnectionException("Cannot connect to SWApi.co");
+        }
+
     }
 
-    public static <T extends SWAbstractPayload> T getOneResponse (String webPatch, Class<T> klass) {
-        
-       try{
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(webPatch))
-                .GET()
-                .build();
-        
-      /*  var p = connection.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-                .thenApply(HttpResponse::body)
-                .thenApply( st-> gson.fromJson(st, klass) )
-                .join();
-       */
-        String body = connection.send(request, HttpResponse.BodyHandlers.ofString()).body();
-           var p = gson.fromJson(body, klass) ;          
-           return p;
-       }catch (IOException | InterruptedException ex) {
-           
-           throw new MyExc.HttpClientNoConnectionException("Cannot connect to SWApi.co");
+    public static <T extends SWAbstractPayload> T getOneResponse(String webPatch, Class<T> klass) {
+
+        try {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(webPatch))
+                    .GET()
+                    .build();
+
+            String body = connection.send(request, HttpResponse.BodyHandlers.ofString()).body();
+            var p = gson.fromJson(body, klass);
+            return p;
+        } catch (IOException | InterruptedException ex) {
+
+            throw new MyExc.HttpClientNoConnectionException("Cannot connect to SWApi.co");
+        }
+
     }
-   
-}
 }

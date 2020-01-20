@@ -5,10 +5,9 @@
  */
 package pl.sobczak.lukasz.spttest.domain;
 
-import java.util.Arrays;
+
 import java.util.HashSet;
 import java.util.Set;
-import java.util.function.Function;
 import java.util.stream.Stream;
 import pl.sobczak.lukasz.spttest.httpClient.HttpClientService;
 import pl.sobczak.lukasz.spttest.httpClient.Url;

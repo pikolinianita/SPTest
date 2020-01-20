@@ -5,7 +5,7 @@
  */
 package pl.sobczak.lukasz.spttest.domain;
 
-import java.util.Arrays;
+
 import pl.sobczak.lukasz.spttest.httpClient.HttpClientService;
 import pl.sobczak.lukasz.spttest.httpClient.Url;
 

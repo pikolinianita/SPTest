@@ -1,6 +1,6 @@
 package pl.sobczak.lukasz.spttest;
 
-/*package pl.sobczak.lukasz.SPTest;
+
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -12,4 +12,4 @@ public class ServletInitializer extends SpringBootServletInitializer {
 		return application.sources(SpTestApplication.class);
 	}
 
-}*/
+}

@@ -5,13 +5,12 @@
  */
 package pl.sobczak.lukasz.spttest;
 
-import java.util.Arrays;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import static java.util.function.Function.identity;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import org.springframework.stereotype.Service;
 import pl.sobczak.lukasz.spttest.httpClient.HttpReport2;
 import pl.sobczak.lukasz.spttest.domain.SWCharacter;

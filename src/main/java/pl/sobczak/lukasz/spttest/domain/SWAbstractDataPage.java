@@ -5,12 +5,9 @@
  */
 package pl.sobczak.lukasz.spttest.domain;
 
-import java.util.Arrays;
+
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Stream;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
 import pl.sobczak.lukasz.spttest.httpClient.HttpClientService;
 import pl.sobczak.lukasz.spttest.httpClient.Url;
 

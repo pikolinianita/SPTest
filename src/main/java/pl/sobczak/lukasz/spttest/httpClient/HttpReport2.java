@@ -12,7 +12,6 @@ import pl.sobczak.lukasz.spttest.domain.SWFilmPage;
 import pl.sobczak.lukasz.spttest.domain.SWFilm;
 import pl.sobczak.lukasz.spttest.domain.SWPlanetsPage;
 import java.util.List;
-import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.sobczak.lukasz.spttest.MyExc;
 
