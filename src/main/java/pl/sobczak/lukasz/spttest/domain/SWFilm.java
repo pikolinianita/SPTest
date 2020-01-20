@@ -8,6 +8,8 @@ package pl.sobczak.lukasz.spttest.domain;
 /**
  *
  * @author piko
+ * Solid class for Film data. 
+ * name and url inherited
  */
 @lombok.ToString
 @lombok.Getter

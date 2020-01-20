@@ -23,7 +23,13 @@ import pl.sobczak.lukasz.spttest.MyExc;
 /**
  *
  * @author piko
+ * Class makes connetions to SWApi. Functions take url and .class of expected object 
+ * returns object.
+ * getResponsePage returns SW(something)Page, url should be like http:\\swapi.co\sth\?search=sth2  ; 
+ * used by characters and planets
+ * getOneResponse returns SW(something), url should be like http:\\swapi.co\sth\11  ; used by films only
  */
+
 @Service
 public class HttpClientService {
 

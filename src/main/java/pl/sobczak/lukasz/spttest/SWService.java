@@ -16,6 +16,8 @@ import pl.sobczak.lukasz.spttest.httpClient.HttpReport2;
 /**
  *
  * @author piko
+ * Class takes requests from REST and makes requests to HTTP part and to Hibernate repository.
+ * Throws Exceptions if GET or DELETE ask for wrong IDs
  */
 
 @Service

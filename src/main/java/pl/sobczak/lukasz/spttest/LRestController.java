@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 /**
  *
  * @author piko
+ * Rest controller - sends requests to SWService
  */
 @RestController
 public class LRestController {
@@ -30,35 +31,30 @@ public class LRestController {
 
     @GetMapping("/report/{id}")
     @ResponseBody Report findOne(@PathVariable String id) {
-        System.out.println("Get One Repoort: " + id);
         return sWService.getReport(id);
     }
 
     @GetMapping("/report")
     @ResponseBody List<Report> findAll() {
-        System.out.println("Get All Reports");
         return sWService.getAllReports();
     }
 
     @PutMapping(value = "/report/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void addOne (@PathVariable String id, @RequestBody RestQuery restQuery) {
-        System.out.println("Added one: " +  id + " a query to: " + restQuery);
         sWService.createOrUpdate(id, restQuery);
         }
     
     @DeleteMapping("/report")
     @ResponseStatus(HttpStatus.OK)
     void deleteAll(){
-        System.out.println("Delete All");
-        sWService.deleteAll();
+       sWService.deleteAll();
     }
     
     @DeleteMapping("report/{id}")
     @ResponseStatus(HttpStatus.OK)
     void deleteOne(@PathVariable String id){
-               System.out.println("Delete one: " + id);
-               sWService.delete(id);
+        sWService.delete(id);
         
     }
     

@@ -8,6 +8,7 @@ package pl.sobczak.lukasz.spttest.httpClient;
 /**
  *
  * @author piko
+ * Keeps URLs for SWApi in one place
  */
 public enum Url{
     PLANET("https://swapi.co/api/planets/"), 

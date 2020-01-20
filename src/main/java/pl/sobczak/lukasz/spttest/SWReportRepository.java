@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * @author piko
+ * Crud repository, no changes
  */
 @Repository
 public interface SWReportRepository extends CrudRepository<Report, String> {

@@ -10,6 +10,7 @@ import lombok.Data;
 /**
  *
  * @author piko
+ * keeps data from GET query from REST API. 
  */
 
 @Data

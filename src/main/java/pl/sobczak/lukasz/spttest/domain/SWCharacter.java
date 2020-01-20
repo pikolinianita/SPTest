@@ -10,6 +10,9 @@ import java.util.Arrays;
 /**
  *
  * @author piko
+ * Solid class for character data. 
+ * name and url inherited
+ * films later used for query SWApi/films
  */
 @lombok.Getter
 public class SWCharacter extends SWAbstractPayload {

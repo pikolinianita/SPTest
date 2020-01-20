@@ -13,14 +13,16 @@ import pl.sobczak.lukasz.spttest.httpClient.Url;
 /**
  *
  * @author piko
+ * solid class for result from Film query. 
+ * constructor takes set of films, (generated from SWCharacterPage) and ask for each film
  */
-//@lombok.ToString
+
 public class SWFilmPage extends SWAbstractDataPage<SWFilm> {
 
     public SWFilmPage(Url url, Set<String> filmsReferences) {
         count = filmsReferences.size();
         results = new LinkedList<>();
-        //System.out.println(filmsReferences);
+        
         if (count > 0) {
             for (var filmUrl : filmsReferences) {
                 

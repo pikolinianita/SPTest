@@ -14,7 +14,14 @@ import pl.sobczak.lukasz.spttest.httpClient.Url;
 /**
  *
  * @author piko
- * @param <T>
+ * 
+ * Abstract class for processing data from JSON send from SWApi.co page. Keeps common logic 
+ * and fields;
+ * Bit misleading - in case of many hits in (eq in character search) combines many 
+ * reponse pages into one (sth)Page object
+ * count - number of hits from query
+ * next - null if there is no next page with results or url for next page of results
+ * @param <T> - T keeps data from particular records
  */
 
 

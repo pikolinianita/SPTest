@@ -8,6 +8,8 @@ package pl.sobczak.lukasz.spttest.domain;
 /**
  *
  * @author piko
+ * Solid class for planets data. 
+ * name and url inherited
  */
 @lombok.Getter
 public class SWPlanets extends SWAbstractPayload{

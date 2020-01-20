@@ -19,6 +19,10 @@ import pl.sobczak.lukasz.spttest.domain.SWFilm;
 /**
  *
  * @author piko
+ * Generates Report (my entity class) with subReports (char/planet/film data) from 
+ * data from HttpClient part.
+ * Throws Exception when cannot match people and planet (= when set of subResults is empty)
+ * 
  */
 @Service
 public class ReportFactory {

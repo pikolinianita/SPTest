@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>pl.sobczak.lukasz</groupId>
 	<artifactId>SPTest</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>war</packaging>
 	<name>SPTest</name>
 	<description>Demo project for Software Plant</description>

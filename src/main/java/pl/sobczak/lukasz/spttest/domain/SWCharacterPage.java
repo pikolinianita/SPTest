@@ -16,6 +16,7 @@ import pl.sobczak.lukasz.spttest.httpClient.Url;
 /**
  *
  * @author piko
+ * solid class for result from Character query. 
  */
 @lombok.Getter
 public class SWCharacterPage extends SWAbstractDataPage<SWCharacter>{

@@ -18,6 +18,10 @@ import pl.sobczak.lukasz.spttest.MyExc;
 /**
  *
  * @author piko
+ * creates report from SWApi (via HttpReport2.create( String name, String planet)
+ * Asks SWApi for planets, characters and films, 
+ * throws exception if request gives no results. 
+ * Keep results and (later) give them to ReportFactory.
  */
 @lombok.ToString
 @lombok.Getter
