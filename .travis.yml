@@ -3,5 +3,5 @@ name: Java CI
 language: java
 jdk:
   - openjdk11
-script:  mvn -B package --file pom.xml
+script:  mvn -DcompilerArgument=-Xlint:unchecked test -P all-unit-tests
 after_success: mvn coveralls:report
