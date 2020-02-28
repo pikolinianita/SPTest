@@ -1,0 +1,7 @@
+name: Java CI
+
+language: java
+jdk:
+  - openjdk11
+script:  mvn -B package --file pom.xml
+after_success: mvn coveralls:report
