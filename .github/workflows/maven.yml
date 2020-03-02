@@ -19,4 +19,16 @@ jobs:
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        parallel-finished: true
+        parallel-finished: false
+    
+    - name: Sonar Report
+      run: mvn verify sonar:sonar
+      env:
+        GITHUB_TOKEN: ${{ github.token }} 
+        
+    - name: upload report
+      uses: actions/upload-artifact@v1
+      with:
+        name: Tests Results
+        path: target/site/
+      continue-on-error: true 
