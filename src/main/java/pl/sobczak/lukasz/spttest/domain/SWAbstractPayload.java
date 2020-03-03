@@ -13,5 +13,6 @@ package pl.sobczak.lukasz.spttest.domain;
  */
 @lombok.Getter
 public abstract class SWAbstractPayload {
-    String name, url;
+    String name;
+    String url;
 }

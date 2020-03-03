@@ -29,7 +29,8 @@ import pl.sobczak.lukasz.spttest.httpClient.Url;
 public abstract class SWAbstractDataPage <T extends SWAbstractPayload> {
     
    protected int count;
-   protected String next, previous;
+   protected String next;
+   protected String previous;
    LinkedList<T> results;   
   
    // HttpClientService httpClient;
