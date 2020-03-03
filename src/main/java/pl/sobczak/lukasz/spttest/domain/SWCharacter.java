@@ -16,7 +16,7 @@ import java.util.Arrays;
  */
 @lombok.Getter
 public class SWCharacter extends SWAbstractPayload {
-    String homeworld; //name, url
+    String homeworld; 
     String[] films;
 
       

@@ -6,6 +6,7 @@
 package pl.sobczak.lukasz.spttest;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.CascadeType;
@@ -27,7 +28,7 @@ import lombok.Data;
 @AllArgsConstructor
 @Entity
 @lombok.NoArgsConstructor
-public class Report {
+public class Report implements Serializable{
 
     @Id
     //@GeneratedValue

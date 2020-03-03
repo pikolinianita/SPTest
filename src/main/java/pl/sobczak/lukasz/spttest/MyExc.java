@@ -16,6 +16,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 public class MyExc {
 
+    private MyExc(){
+        
+    }
+    
     @ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
     public static class HttpClientNoConnectionException extends RuntimeException {
 

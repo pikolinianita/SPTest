@@ -30,30 +30,30 @@ public class LRestController {
     SWService sWService;
 
     @GetMapping("/report/{id}")
-    @ResponseBody Report findOne(@PathVariable String id) {
+    @ResponseBody public Report findOne(@PathVariable String id) {
         return sWService.getReport(id);
     }
 
     @GetMapping("/report")
-    @ResponseBody List<Report> findAll() {
+    @ResponseBody public List<Report> findAll() {
         return sWService.getAllReports();
     }
 
     @PutMapping(value = "/report/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    void addOne (@PathVariable String id, @RequestBody RestQuery restQuery) {
+    public void addOne (@PathVariable String id, @RequestBody RestQuery restQuery) {
         sWService.createOrUpdate(id, restQuery);
         }
     
     @DeleteMapping("/report")
     @ResponseStatus(HttpStatus.OK)
-    void deleteAll(){
+    public void deleteAll(){
        sWService.deleteAll();
     }
     
     @DeleteMapping("report/{id}")
     @ResponseStatus(HttpStatus.OK)
-    void deleteOne(@PathVariable String id){
+    public void deleteOne(@PathVariable String id){
         sWService.delete(id);
         
     }

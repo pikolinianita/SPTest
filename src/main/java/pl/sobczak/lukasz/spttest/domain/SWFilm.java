@@ -14,7 +14,7 @@ package pl.sobczak.lukasz.spttest.domain;
 @lombok.ToString
 @lombok.Getter
 public class SWFilm extends SWAbstractPayload{
-   // String url, name;
+   
     String episode_id;
     String title;
 }

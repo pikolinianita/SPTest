@@ -13,8 +13,7 @@ package pl.sobczak.lukasz.spttest.domain;
  */
 @lombok.Getter
 public class SWPlanets extends SWAbstractPayload{
-    // String name, url;
-
+    
     @Override
     public String toString() {
         return "SWPlanets{" + "name=" + name + ", url=" + url + '}' + System.lineSeparator();

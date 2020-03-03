@@ -35,7 +35,6 @@ public class ReportSubresult implements Serializable{
     int id;
     
     
-    //String report_id;
     @ManyToOne
     @JsonBackReference
     Report report;

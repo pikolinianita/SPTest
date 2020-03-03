@@ -33,7 +33,6 @@ public abstract class SWAbstractDataPage <T extends SWAbstractPayload> {
    protected String previous;
    LinkedList<T> results;   
   
-   // HttpClientService httpClient;
 
     public SWAbstractDataPage(){};
     
@@ -42,7 +41,7 @@ public abstract class SWAbstractDataPage <T extends SWAbstractPayload> {
    
         var pageFromNet = HttpClientService.getResponsePage(url.label +"?search="+name, this.getClass());
         while (pageFromNet.hasNextPage()){
-            pageFromNet.addNextPage(httpClient.getResponsePage( pageFromNet.getNextPageURL(), this.getClass()));
+            pageFromNet.addNextPage(HttpClientService.getResponsePage( pageFromNet.getNextPageURL(), this.getClass()));
         }
         this.count = pageFromNet.count;
         this.results = pageFromNet.results;

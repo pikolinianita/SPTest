@@ -29,7 +29,9 @@ public class HttpReport2 {
     SWCharacterPage characters;
     SWPlanetsPage planets;
     SWFilmPage films;
-    String charsStatus, planetsStatus, filmStatus;
+    String charsStatus;
+    String planetsStatus;
+    String filmStatus;
     String name, planet;
 
     @Autowired
