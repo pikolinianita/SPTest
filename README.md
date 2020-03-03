@@ -15,5 +15,5 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=pikolinianita_TestOfTests&metric=coverage)](https://sonarcloud.io/dashboard?id=pikolinianita_TestOfTests)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=pikolinianita_TestOfTests&metric=code_smells)](https://sonarcloud.io/dashboard?id=pikolinianita_TestOfTests)
 
-challenge from SP ftyg
+challenge from SP. It was fun.
 
