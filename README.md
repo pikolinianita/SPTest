@@ -1,6 +1,6 @@
 # SPTest
 
-![Java CI](https://github.com/pikolinianita/SPTest/workflows/Java%20CI/badge.svg)
+[![Java CI]](https://github.com/pikolinianita/SPTest/workflows/Java%20CI/badge.svg)
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/dashboard?id=pikolinianita_TestOfTests)
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=pikolinianita_TestOfTests)](https://sonarcloud.io/dashboard?id=pikolinianita_TestOfTests)
 
